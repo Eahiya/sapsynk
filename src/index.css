@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f8fafc;
+}
+
+body {
+  background-color: var(--color-background);
+  color: #0f172a;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
