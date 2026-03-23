@@ -150,19 +150,7 @@ export default function App() {
       <Toaster theme="dark" position="bottom-right" />
       {/* Global overlays */}
 
-      {/* Ribbons global cursor */}
-      <div className="fixed inset-0 pointer-events-none z-[9999]">
-        <Ribbons
-          colors={['#5227FF']}
-          baseThickness={10}
-          speedMultiplier={0.5}
-          maxAge={450}
-          enableFade={true}
-          enableShaderEffect={false}
-        />
-      </div>
 
-      <ScrollProgress />
       <FloatingPill />
 
       <StarsCanvas />

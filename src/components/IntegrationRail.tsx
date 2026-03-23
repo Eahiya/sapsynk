@@ -67,8 +67,17 @@ function LogoItem({ name, color, bg }: { name: string; color: string; bg: string
   );
 }
 
-function Row({ reverse }: { reverse?: boolean }) {
-  const items = [...integrations, ...integrations]; // doubled for seamless loop
+function Row({ reverse, startIndex = 0 }: { reverse?: boolean; startIndex?: number }) {
+  // Create a circular array that starts at different positions for each row
+  const items = [];
+  const totalItems = integrations.length;
+  
+  // Add items starting from startIndex for a full loop
+  for (let i = 0; i < totalItems; i++) {
+    const index = (startIndex + i) % totalItems;
+    items.push(integrations[index]);
+  }
+  
   return (
     <div className="flex overflow-hidden">
       <div className={`flex items-center ${reverse ? 'marquee-right' : 'marquee-left'}`}>
@@ -101,8 +110,8 @@ export default function IntegrationRail() {
       </div>
 
       <div className="space-y-6">
-        <Row />
-        <Row reverse />
+        <Row startIndex={0} />
+        <Row reverse startIndex={Math.floor(integrations.length / 2)} />
       </div>
     </section>
   );

@@ -15,15 +15,7 @@ export const Navbar = () => {
           href="#about-me"
           className="flex items-center"
         >
-          <img
-            src="/logo.png"
-            alt="Logo"
-            width={70}
-            height={70}
-            draggable={false}
-            className="cursor-pointer"
-          />
-          <span className="hidden md:flex text-2xl font-['Grand_Hotel'] text-[#F5F0E8] ml-[10px] tracking-wide">
+          <span className="hidden md:flex text-2xl font-['Grand_Hotel'] text-[#F5F0E8] tracking-wide">
             Sap<span className="text-[#b49bff]">synk</span>
           </span>
           <div className="w-2 h-2 rounded-full bg-[#b49bff] animate-pulse ml-2" />

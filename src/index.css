@@ -53,20 +53,6 @@ body {
 
 
 /* ==========================================
-   SCROLL PROGRESS BAR
-   ========================================== */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #00FFF0, #8B5CF6);
-  z-index: 99997;
-  transform-origin: left;
-  transition: transform 0.1s linear;
-}
-
-/* ==========================================
    INTEGRATION RAIL MARQUEE
    ========================================== */
 @keyframes marquee-left {
