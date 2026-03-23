@@ -13,7 +13,7 @@ function LeadScoringDemo() {
   ];
   return (
     <div className="w-full space-y-3">
-      <p className="text-xs font-[family-name:var(--font-mono)] text-[#00FFF0] mb-4">⟡ Scoring 847 leads...</p>
+      <p className="text-xs font-[family-name:var(--font-mono)] text-[#b49bff] mb-4">⟡ Scoring 847 leads...</p>
       {leads.map((l, i) => (
         <div key={i} className="flex items-center justify-between p-3 rounded-xl border border-white/8 bg-white/2">
           <span className="text-sm text-[#F5F0E8]/70 font-[family-name:var(--font-mono)]">{l.name}</span>
@@ -45,9 +45,9 @@ function ChatDemo() {
           <div
             className="max-w-[80%] px-4 py-2, rounded-2xl text-sm"
             style={{
-              background: msg.role === 'ai' ? 'rgba(0,255,240,0.08)' : 'rgba(139,92,246,0.15)',
-              color: msg.role === 'ai' ? '#00FFF0' : '#F5F0E8',
-              border: `1px solid ${msg.role === 'ai' ? 'rgba(0,255,240,0.2)' : 'rgba(139,92,246,0.2)'}`,
+              background: msg.role === 'ai' ? 'rgba(180, 155, 255,0.08)' : 'rgba(139,92,246,0.15)',
+              color: msg.role === 'ai' ? '#b49bff' : '#F5F0E8',
+              border: `1px solid ${msg.role === 'ai' ? 'rgba(180, 155, 255,0.2)' : 'rgba(139,92,246,0.2)'}`,
               padding: '8px 16px',
             }}
           >
@@ -67,7 +67,7 @@ Hi {{FirstName}},
 I noticed {{Company}} recently expanded into {{Market}}. Our automation platform has helped similar companies save 40+ hrs/week...`;
   return (
     <div className="w-full p-4 rounded-xl border border-white/10 bg-black/20 font-[family-name:var(--font-mono)] text-xs text-[#F5F0E8]/70 whitespace-pre-line leading-relaxed">
-      <div className="text-[#00FFF0] mb-3 font-semibold">✉ AI composing email...</div>
+      <div className="text-[#b49bff] mb-3 font-semibold">✉ AI composing email...</div>
       {emailText}
       <span className="terminal-cursor" />
     </div>
@@ -78,7 +78,7 @@ function DataPipelineDemo() {
   const rows = [
     { name: 'user_signup.csv row 1', status: 'Transformed', color: '#22C55E' },
     { name: 'user_signup.csv row 2', status: 'Enriched',    color: '#8B5CF6' },
-    { name: 'user_signup.csv row 3', status: 'Categorized', color: '#00FFF0' },
+    { name: 'user_signup.csv row 3', status: 'Categorized', color: '#b49bff' },
     { name: 'user_signup.csv row 4', status: 'Processing',  color: '#F97316' },
     { name: 'user_signup.csv row 5', status: 'Queued',      color: '#F5F0E8' },
   ];
@@ -102,7 +102,7 @@ function AnalyticsDemo() {
   const max = Math.max(...data);
   return (
     <div className="w-full">
-      <p className="text-xs font-[family-name:var(--font-mono)] text-[#00FFF0] mb-4">📈 Building report...</p>
+      <p className="text-xs font-[family-name:var(--font-mono)] text-[#b49bff] mb-4">📈 Building report...</p>
       <div className="flex items-end gap-3 h-32">
         {data.map((v, i) => (
           <div key={i} className="flex-1 flex flex-col items-center gap-1">
@@ -110,7 +110,7 @@ function AnalyticsDemo() {
               className="w-full rounded-t-sm transition-all duration-1000"
               style={{
                 height: `${(v / max) * 100}%`,
-                background: `linear-gradient(180deg, #00FFF0, #8B5CF6)`,
+                background: `linear-gradient(180deg, #b49bff, #8B5CF6)`,
                 opacity: 0.7 + (i / data.length) * 0.3,
               }}
             />
@@ -130,8 +130,8 @@ function DocumentDemo() {
       <div className="text-[#F5F0E8]/40">📄 Contract_Q1_2025.pdf</div>
       {['Total Contract Value: $48,000', 'Renewal Date: March 2026', 'Notice Period: 30 days'].map((line, i) => (
         <div key={i} className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-[#00FFF0] animate-pulse" />
-          <span className="text-[#00FFF0]">Extracted: </span>
+          <div className="w-2 h-2 rounded-full bg-[#b49bff] animate-pulse" />
+          <span className="text-[#b49bff]">Extracted: </span>
           <span className="text-[#F5F0E8]/70">{line}</span>
         </div>
       ))}
@@ -145,7 +145,7 @@ function CRMDemo() {
       <div className="text-[#8B5CF6] font-semibold mb-3">👤 Contact Being Enriched...</div>
       {[
         { label: 'Company Size', value: '500-1000 employees', color: '#22C55E' },
-        { label: 'Industry',     value: 'SaaS / Technology',   color: '#00FFF0' },
+        { label: 'Industry',     value: 'SaaS / Technology',   color: '#b49bff' },
         { label: 'Funding',      value: 'Series B ($40M)',      color: '#F97316' },
         { label: 'Tech Stack',   value: 'AWS, React, Node',     color: '#8B5CF6' },
       ].map((item, i) => (
@@ -190,7 +190,7 @@ const services = [
     description: 'AI scores and prioritizes leads by intent signals, company data, and behavioral patterns — so your team focuses only on deals ready to close.',
     demoComponent: <LeadScoringDemo />,
     stat: '10x faster',
-    color: '#00FFF0',
+    color: '#b49bff',
     icon: '🎯',
   },
   {
@@ -279,7 +279,7 @@ export default function Services() {
           </p>
           <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold text-[#F5F0E8]">
             Services that{' '}
-            <span className="text-[#00FFF0]">prove themselves</span>
+            <span className="text-[#b49bff]">prove themselves</span>
           </h2>
           <p className="text-[#F5F0E8]/40 mt-4 text-sm">Click any card to see a live demo</p>
         </div>

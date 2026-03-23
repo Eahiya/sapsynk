@@ -85,9 +85,9 @@ export default function IntegrationRail() {
     <section className="py-20 relative overflow-hidden border-y border-white/5">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
-           style={{ background: 'linear-gradient(90deg, #080808 0%, transparent 100%)' }} />
+           style={{ background: 'linear-gradient(90deg, #030014 0%, transparent 100%)' }} />
       <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
-           style={{ background: 'linear-gradient(270deg, #080808 0%, transparent 100%)' }} />
+           style={{ background: 'linear-gradient(270deg, #030014 0%, transparent 100%)' }} />
 
       {/* Header */}
       <div className="text-center mb-12 px-6 relative z-10">
@@ -96,7 +96,7 @@ export default function IntegrationRail() {
         </p>
         <h2 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[#F5F0E8]/80">
           Connects with{' '}
-          <span className="text-[#00FFF0]">every tool you already use</span>
+          <span className="text-[#b49bff]">every tool you already use</span>
         </h2>
       </div>
 

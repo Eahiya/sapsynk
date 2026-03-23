@@ -91,10 +91,10 @@ export default function AIChatWidget() {
          style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(20px)' }}>
       {/* Header */}
       <div className="flex items-center gap-3 px-5 py-4 border-b border-white/8"
-           style={{ background: 'rgba(0,255,240,0.04)' }}>
+           style={{ background: 'rgba(180, 155, 255,0.04)' }}>
         <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-             style={{ background: 'rgba(0,255,240,0.15)', border: '1px solid rgba(0,255,240,0.3)' }}>
-          <Bot className="w-5 h-5 text-[#00FFF0]" />
+             style={{ background: 'rgba(180, 155, 255,0.15)', border: '1px solid rgba(180, 155, 255,0.3)' }}>
+          <Bot className="w-5 h-5 text-[#b49bff]" />
         </div>
         <div>
           <p className="text-sm font-semibold text-[#F5F0E8]">Synk</p>
@@ -104,8 +104,8 @@ export default function AIChatWidget() {
           </div>
         </div>
         {done && (
-          <div className="ml-auto text-xs font-[family-name:var(--font-mono)] text-[#00FFF0] px-2 py-1 rounded-full"
-               style={{ background: 'rgba(0,255,240,0.1)', border: '1px solid rgba(0,255,240,0.2)' }}>
+          <div className="ml-auto text-xs font-[family-name:var(--font-mono)] text-[#b49bff] px-2 py-1 rounded-full"
+               style={{ background: 'rgba(180, 155, 255,0.1)', border: '1px solid rgba(180, 155, 255,0.2)' }}>
             ✓ Qualified
           </div>
         )}
@@ -128,15 +128,15 @@ export default function AIChatWidget() {
             >
               {msg.role === 'ai' && (
                 <div className="w-7 h-7 rounded-lg shrink-0 flex items-center justify-center mt-1"
-                     style={{ background: 'rgba(0,255,240,0.12)' }}>
-                  <Bot className="w-4 h-4 text-[#00FFF0]" />
+                     style={{ background: 'rgba(180, 155, 255,0.12)' }}>
+                  <Bot className="w-4 h-4 text-[#b49bff]" />
                 </div>
               )}
               <div
                 className="max-w-[82%] px-4 py-3 rounded-2xl text-sm leading-relaxed whitespace-pre-line"
                 style={
                   msg.role === 'ai'
-                    ? { background: 'rgba(0,255,240,0.06)', color: '#F5F0E8', border: '1px solid rgba(0,255,240,0.12)' }
+                    ? { background: 'rgba(180, 155, 255,0.06)', color: '#F5F0E8', border: '1px solid rgba(180, 155, 255,0.12)' }
                     : { background: 'rgba(139,92,246,0.15)', color: '#F5F0E8', border: '1px solid rgba(139,92,246,0.25)' }
                 }
               >
@@ -158,12 +158,12 @@ export default function AIChatWidget() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="flex items-center gap-1.5 px-4 py-3 rounded-2xl w-fit"
-            style={{ background: 'rgba(0,255,240,0.06)', border: '1px solid rgba(0,255,240,0.12)' }}
+            style={{ background: 'rgba(180, 155, 255,0.06)', border: '1px solid rgba(180, 155, 255,0.12)' }}
           >
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className="w-1.5 h-1.5 rounded-full bg-[#00FFF0]"
+                className="w-1.5 h-1.5 rounded-full bg-[#b49bff]"
                 animate={{ scale: [1, 1.5, 1] }}
                 transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.2 }}
               />
@@ -180,8 +180,8 @@ export default function AIChatWidget() {
           >
             <a
               href="#contact"
-              className="px-6 py-3 rounded-full text-sm font-semibold text-[#080808] bg-[#00FFF0]
-                         hover:bg-[#00FFF0]/90 transition-all"
+              className="px-6 py-3 rounded-full text-sm font-semibold text-[#030014] bg-[#b49bff]
+                         hover:bg-[#b49bff]/90 transition-all"
             >
               📅 Book Your Strategy Call →
             </a>
@@ -203,7 +203,7 @@ export default function AIChatWidget() {
             placeholder="Type your answer..."
             className="flex-1 bg-transparent text-sm text-[#F5F0E8] placeholder:text-[#F5F0E8]/30
                        border border-white/10 rounded-xl px-4 py-2.5 outline-none
-                       focus:border-[#00FFF0]/30 transition-all font-[family-name:var(--font-body)]"
+                       focus:border-[#b49bff]/30 transition-all font-[family-name:var(--font-body)]"
             disabled={loading}
           />
           <button
@@ -211,7 +211,7 @@ export default function AIChatWidget() {
             disabled={loading || !input.trim()}
             className="w-10 h-10 rounded-xl flex items-center justify-center transition-all shrink-0
                        disabled:opacity-30 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
-            style={{ background: 'rgba(0,255,240,0.15)', border: '1px solid rgba(0,255,240,0.3)', color: '#00FFF0' }}
+            style={{ background: 'rgba(180, 155, 255,0.15)', border: '1px solid rgba(180, 155, 255,0.3)', color: '#b49bff' }}
           >
             <Send className="w-4 h-4" />
           </button>

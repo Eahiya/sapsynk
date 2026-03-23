@@ -50,7 +50,7 @@ export default function BeforeAfterSlider() {
           </p>
           <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold text-[#F5F0E8]">
             Drag to see{' '}
-            <span className="text-[#00FFF0]">the difference</span>
+            <span className="text-[#b49bff]">the difference</span>
           </h2>
           <p className="text-[#F5F0E8]/40 mt-4 text-sm">← Drag the handle to reveal →</p>
         </div>
@@ -185,17 +185,17 @@ export default function BeforeAfterSlider() {
             className="absolute top-0 bottom-0 w-[2px] z-20 pointer-events-none"
             style={{
               left: `${dragX}%`,
-              background: 'linear-gradient(180deg, transparent, #00FFF0, transparent)',
-              boxShadow: '0 0 12px rgba(0,255,240,0.6)',
+              background: 'linear-gradient(180deg, transparent, #b49bff, transparent)',
+              boxShadow: '0 0 12px rgba(180, 155, 255,0.6)',
             }}
           />
 
           {/* Drag handle */}
           <motion.div
             className="absolute top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full glass-cyan
-                       flex items-center justify-center text-[#00FFF0] font-bold select-none
-                       border border-[#00FFF0]/40 shadow-lg"
-            style={{ left: `calc(${dragX}% - 20px)`, boxShadow: '0 0 20px rgba(0,255,240,0.4)' }}
+                       flex items-center justify-center text-[#b49bff] font-bold select-none
+                       border border-[#b49bff]/40 shadow-lg"
+            style={{ left: `calc(${dragX}% - 20px)`, boxShadow: '0 0 20px rgba(180, 155, 255,0.4)' }}
           >
             <span className="text-xs font-[family-name:var(--font-mono)]">⟷</span>
           </motion.div>

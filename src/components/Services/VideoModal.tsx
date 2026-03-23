@@ -61,7 +61,7 @@ export default function VideoModal({ title, description, demoComponent, onClose 
 
           {/* Right: Info */}
           <div className="p-8 flex flex-col justify-center">
-            <p className="text-xs font-[family-name:var(--font-mono)] tracking-[0.25em] uppercase text-[#00FFF0]/60 mb-3">
+            <p className="text-xs font-[family-name:var(--font-mono)] tracking-[0.25em] uppercase text-[#b49bff]/60 mb-3">
               Live Demo
             </p>
             <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[#F5F0E8] mb-4 leading-tight">
@@ -75,8 +75,8 @@ export default function VideoModal({ title, description, demoComponent, onClose 
               onClick={onClose}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
-              className="px-6 py-3 rounded-full bg-[#00FFF0] text-[#080808] font-semibold text-sm
-                         hover:bg-[#00FFF0]/90 transition-all w-fit"
+              className="px-6 py-3 rounded-full bg-[#b49bff] text-[#030014] font-semibold text-sm
+                         hover:bg-[#b49bff]/90 transition-all w-fit"
             >
               Get this for my business →
             </motion.a>

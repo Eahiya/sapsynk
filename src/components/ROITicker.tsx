@@ -9,7 +9,7 @@ const metrics = [
     suffix: 'hrs',
     duration: 2000,
     live: true,
-    color: '#00FFF0',
+    color: '#b49bff',
   },
   {
     label: 'Tasks automated',
@@ -104,7 +104,7 @@ export default function ROITicker() {
     >
       {/* Section bg */}
       <div className="absolute inset-0 pointer-events-none"
-           style={{ background: 'radial-gradient(ellipse at center, rgba(0,255,240,0.03) 0%, transparent 70%)' }} />
+           style={{ background: 'radial-gradient(ellipse at center, rgba(180, 155, 255,0.03) 0%, transparent 70%)' }} />
 
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -113,7 +113,7 @@ export default function ROITicker() {
           </p>
           <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold text-[#F5F0E8]">
             Numbers that move{' '}
-            <span className="text-[#00FFF0]">businesses forward</span>
+            <span className="text-[#b49bff]">businesses forward</span>
           </h2>
         </div>
 

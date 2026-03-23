@@ -24,12 +24,12 @@ const terminalLines: TerminalLine[] = [
 ];
 
 const colorMap: Record<LineType, string> = {
-  cmd:     '#00FFF0',
+  cmd:     '#b49bff',
   info:    'rgba(245,240,232,0.5)',
   success: '#22C55E',
   ai:      '#8B5CF6',
   data:    '#FBBF24',
-  result:  '#00FFF0',
+  result:  '#b49bff',
 };
 
 const CHAR_DELAY_MS = 18;
@@ -119,7 +119,7 @@ export default function TerminalAnimation({ onComplete }: Props) {
         </span>
         <button
           onClick={reset}
-          className="ml-auto p-1.5 rounded-md text-white/30 hover:text-[#00FFF0] hover:bg-white/5 transition-all"
+          className="ml-auto p-1.5 rounded-md text-white/30 hover:text-[#b49bff] hover:bg-white/5 transition-all"
           title="Replay"
         >
           <RotateCcw className="w-3.5 h-3.5" />
@@ -158,7 +158,7 @@ export default function TerminalAnimation({ onComplete }: Props) {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            style={{ color: '#00FFF0' }}
+            style={{ color: '#b49bff' }}
           >
             <span className="terminal-cursor" />
           </motion.div>

@@ -5,9 +5,9 @@
    DESIGN TOKENS
    ========================================== */
 @theme {
-  --color-background: #080808;
-  --color-surface: #0f0f0f;
-  --color-surface-2: #151515;
+  --color-background: #030014;
+  --color-surface: #0a0a2a;
+  --color-surface-2: #151540;
   --color-border: rgba(255,255,255,0.08);
   --color-border-bright: rgba(0,255,240,0.25);
   --color-cyan: #00FFF0;
@@ -32,21 +32,13 @@
   box-sizing: border-box;
 }
 
-* {
-  cursor: none;
-}
-
-@media (hover: none) {
-  * { cursor: auto; }
-  .cursor-dot, .cursor-ring { display: none; }
-}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #080808;
+  background-color: #030014;
   color: #F5F0E8;
   font-family: var(--font-body);
   overflow-x: hidden;
@@ -59,46 +51,6 @@ body {
   color: #00FFF0;
 }
 
-/* ==========================================
-   CUSTOM CURSOR
-   ========================================== */
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background: #00FFF0;
-  border-radius: 50%;
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 99999;
-  mix-blend-mode: difference;
-  transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
-  will-change: transform;
-}
-
-.cursor-ring {
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgba(0,255,240,0.4);
-  border-radius: 50%;
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 99998;
-  transition: transform 0.15s ease, width 0.2s, height 0.2s, border-color 0.2s, background 0.2s;
-  will-change: transform;
-}
-
-.cursor-dot.hovered {
-  transform: scale(0);
-}
-
-.cursor-ring.hovered {
-  width: 48px;
-  height: 48px;
-  background: rgba(0,255,240,0.08);
-  border-color: rgba(0,255,240,0.6);
-}
 
 /* ==========================================
    SCROLL PROGRESS BAR
@@ -265,7 +217,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #080808;
+  background: #030014;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(0,255,240,0.2);
@@ -309,4 +261,57 @@ body {
   background: #22C55E;
   border-radius: 50%;
   animation: live-pulse 1.5s ease-in-out infinite;
+}
+
+/* ==========================================
+   SPACE THEME UTILITIES
+   ========================================== */
+.cursive {
+  font-family: "Cedarville Cursive", cursive;
+}
+.Welcome-text {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #a48fff1f;
+  display: flex;
+
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+}
+
+.button-primary {
+  background: linear-gradient(
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.32) 100%
+    ),
+    rgba(113, 47, 255, 0.12);
+  box-shadow: inset 0 0 12px #bf97ff3d;
+}
+.button-primary:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.42) 100%
+    ),
+    rgba(113, 47, 255, 0.24);
+  box-shadow: inset 0 0 12px #bf97ff70;
 }

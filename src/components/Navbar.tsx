@@ -33,9 +33,9 @@ export default function Navbar() {
       {/* Logo */}
       <a href="#" className="flex items-center gap-2 group">
         <span className="text-2xl font-['Grand_Hotel'] text-[#F5F0E8] tracking-wide">
-          Sap<span className="text-[#00FFF0]">synk</span>
+          Sap<span className="text-[#b49bff]">synk</span>
         </span>
-        <div className="w-2 h-2 rounded-full bg-[#00FFF0] animate-pulse" />
+        <div className="w-2 h-2 rounded-full bg-[#b49bff] animate-pulse" />
       </a>
 
       {/* Desktop nav */}
@@ -44,7 +44,7 @@ export default function Navbar() {
           <a
             key={link.href}
             href={link.href}
-            className="text-[#F5F0E8]/60 hover:text-[#00FFF0] transition-colors duration-200 tracking-wide"
+            className="text-[#F5F0E8]/60 hover:text-[#b49bff] transition-colors duration-200 tracking-wide"
           >
             {link.label}
           </a>
@@ -57,8 +57,8 @@ export default function Navbar() {
           href="#contact"
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.96 }}
-          className="px-5 py-2.5 rounded-full border border-[#00FFF0]/30 text-[#00FFF0] text-sm font-medium
-                     hover:bg-[#00FFF0]/10 transition-all duration-200 font-[family-name:var(--font-body)]"
+          className="px-5 py-2.5 rounded-full border border-[#b49bff]/30 text-[#b49bff] text-sm font-medium
+                     hover:bg-[#b49bff]/10 transition-all duration-200 font-[family-name:var(--font-body)]"
         >
           Book a Call ↗
         </motion.a>
@@ -87,7 +87,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-[#F5F0E8]/70 hover:text-[#00FFF0] transition-colors text-lg"
+                className="text-[#F5F0E8]/70 hover:text-[#b49bff] transition-colors text-lg"
               >
                 {link.label}
               </a>
@@ -95,7 +95,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 px-5 py-3 rounded-full border border-[#00FFF0]/30 text-[#00FFF0] text-center font-medium"
+              className="mt-2 px-5 py-3 rounded-full border border-[#b49bff]/30 text-[#b49bff] text-center font-medium"
             >
               Book a Call ↗
             </a>

@@ -20,7 +20,7 @@ interface Edge {
 const nodeColors: Record<NodeKind, { bg: string; border: string; text: string }> = {
   trigger: { bg: 'rgba(249,115,22,0.12)', border: 'rgba(249,115,22,0.5)', text: '#F97316' },
   process: { bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.5)', text: '#8B5CF6' },
-  output:  { bg: 'rgba(0,255,240,0.08)',  border: 'rgba(0,255,240,0.4)',  text: '#00FFF0' },
+  output:  { bg: 'rgba(180, 155, 255,0.08)',  border: 'rgba(180, 155, 255,0.4)',  text: '#b49bff' },
 };
 
 const SVG_W = 800;
@@ -78,7 +78,7 @@ export default function WorkflowBuilder() {
           </p>
           <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold text-[#F5F0E8]">
             Click a trigger to{' '}
-            <span className="text-[#00FFF0]">run the workflow</span>
+            <span className="text-[#b49bff]">run the workflow</span>
           </h2>
           <p className="text-[#F5F0E8]/40 mt-3 text-sm flex items-center justify-center gap-2">
             <ArrowDown className="w-4 h-4" /> Click any orange node to activate the flow
@@ -102,7 +102,7 @@ export default function WorkflowBuilder() {
                 <g key={`${edge.from}-${edge.to}`}>
                   <line
                     x1={from.x} y1={from.y} x2={to.x} y2={to.y}
-                    stroke={isActive ? '#00FFF0' : 'rgba(255,255,255,0.08)'}
+                    stroke={isActive ? '#b49bff' : 'rgba(255,255,255,0.08)'}
                     strokeWidth={isActive ? 2 : 1}
                     strokeDasharray={isActive ? '8 4' : 'none'}
                     style={{ transition: 'stroke 0.3s, stroke-width 0.3s' }}
@@ -111,7 +111,7 @@ export default function WorkflowBuilder() {
                   {isActive && (
                     <motion.circle
                       r={5}
-                      fill="#00FFF0"
+                      fill="#b49bff"
                       filter="url(#glow)"
                       initial={{ offsetDistance: '0%' } as never}
                       animate={{ offsetDistance: '100%' } as never}
@@ -185,7 +185,7 @@ export default function WorkflowBuilder() {
           <div className="border-t border-white/5 px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
                style={{ background: 'rgba(255,255,255,0.02)' }}>
             <p className="text-sm text-[#F5F0E8]/60">
-              <span className="text-[#00FFF0]">⟡</span>{' '}
+              <span className="text-[#b49bff]">⟡</span>{' '}
               This workflow saves{' '}
               <span className="text-[#F5F0E8] font-semibold">~12 hrs/week</span>{' '}
               for teams like yours
@@ -194,8 +194,8 @@ export default function WorkflowBuilder() {
               href="#contact"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
-              className="px-5 py-2.5 rounded-full text-sm font-semibold text-[#080808] bg-[#00FFF0]
-                         hover:bg-[#00FFF0]/90 transition-all shrink-0"
+              className="px-5 py-2.5 rounded-full text-sm font-semibold text-[#030014] bg-[#b49bff]
+                         hover:bg-[#b49bff]/90 transition-all shrink-0"
             >
               Want this built for you? →
             </motion.a>
@@ -209,7 +209,7 @@ export default function WorkflowBuilder() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              className="mt-4 text-center text-sm font-[family-name:var(--font-mono)] text-[#00FFF0]"
+              className="mt-4 text-center text-sm font-[family-name:var(--font-mono)] text-[#b49bff]"
             >
               ▶ Workflow executing... watching data flow in real time
             </motion.div>

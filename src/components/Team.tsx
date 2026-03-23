@@ -103,7 +103,7 @@ function GeometricPattern({ pattern, color }: { pattern: string; color: string }
   );
 }
 
-const memberColors = ['#00FFF0', '#8B5CF6', '#F97316', '#22C55E'];
+const memberColors = ['#b49bff', '#8B5CF6', '#F97316', '#22C55E'];
 
 function TeamCard({ member, color }: { member: TeamMember; color: string }) {
   return (
@@ -186,7 +186,7 @@ export default function Team() {
             className="text-4xl md:text-5xl font-[family-name:var(--font-heading)] font-bold text-[#F5F0E8]"
           >
             The team behind{' '}
-            <span className="text-[#00FFF0]">the automation</span>
+            <span className="text-[#b49bff]">the automation</span>
           </motion.h2>
           <p className="mt-4 text-[#F5F0E8]/40 text-sm">Hover each card to learn more</p>
         </div>

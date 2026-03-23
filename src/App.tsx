@@ -1,82 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
+import { Toaster } from 'sonner';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Hero from './components/Hero/Hero';
-import IntegrationRail from './components/IntegrationRail';
+import { Navbar } from './components/main/navbar';
+import { Footer } from './components/main/footer';
+import { Hero } from './components/main/hero';
+import { StarsCanvas } from './components/main/star-background';
+import { Skills } from './components/main/skills';
+import Ribbons from './components/main/Ribbons';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
 import WorkflowBuilder from './components/WorkflowBuilder';
 import Services from './components/Services/Services';
 import ROITicker from './components/ROITicker';
 import Team from './components/Team';
-import Contact from './components/Contact/Contact';
-
-// ─── Custom Cursor ────────────────────────────────────────────────────────────
-function CustomCursor() {
-  const dotRef = useRef<HTMLDivElement>(null);
-  const ringRef = useRef<HTMLDivElement>(null);
-  const pos = useRef({ x: 0, y: 0 });
-  const ring = useRef({ x: 0, y: 0 });
-  const raf = useRef<number>(0);
-
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      pos.current = { x: e.clientX, y: e.clientY };
-    };
-
-    const onEnter = () => {
-      dotRef.current?.classList.add('hovered');
-      ringRef.current?.classList.add('hovered');
-    };
-    const onLeave = () => {
-      dotRef.current?.classList.remove('hovered');
-      ringRef.current?.classList.remove('hovered');
-    };
-
-    window.addEventListener('mousemove', onMove);
-
-    const interactables = document.querySelectorAll(
-      'a, button, [role="button"], input, textarea, select, [data-cursor-hover]'
-    );
-    interactables.forEach((el) => {
-      el.addEventListener('mouseenter', onEnter);
-      el.addEventListener('mouseleave', onLeave);
-    });
-
-    const animate = () => {
-      // Dot: instant
-      if (dotRef.current) {
-        dotRef.current.style.transform = `translate(${pos.current.x - 4}px, ${pos.current.y - 4}px)`;
-      }
-      // Ring: lagged lerp
-      ring.current.x += (pos.current.x - ring.current.x) * 0.15;
-      ring.current.y += (pos.current.y - ring.current.y) * 0.15;
-      if (ringRef.current) {
-        ringRef.current.style.transform = `translate(${ring.current.x - 16}px, ${ring.current.y - 16}px)`;
-      }
-      raf.current = requestAnimationFrame(animate);
-    };
-    raf.current = requestAnimationFrame(animate);
-
-    return () => {
-      window.removeEventListener('mousemove', onMove);
-      cancelAnimationFrame(raf.current);
-      interactables.forEach((el) => {
-        el.removeEventListener('mouseenter', onEnter);
-        el.removeEventListener('mouseleave', onLeave);
-      });
-    };
-  }, []);
-
-  return (
-    <>
-      <div ref={dotRef} className="cursor-dot" />
-      <div ref={ringRef} className="cursor-ring" />
-    </>
-  );
-}
+import { Contact } from './components/Contact/Contact';
 
 // ─── Scroll Progress Bar ──────────────────────────────────────────────────────
 function ScrollProgress() {
@@ -208,27 +146,32 @@ function CTASection() {
 // ─── App ──────────────────────────────────────────────────────────────────────
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#080808] text-[#F5F0E8] font-[family-name:var(--font-body)] overflow-x-hidden">
+    <div className="min-h-screen bg-[#030014] text-[#F5F0E8] font-[family-name:var(--font-body)] overflow-x-hidden">
+      <Toaster theme="dark" position="bottom-right" />
       {/* Global overlays */}
-      <CustomCursor />
+      
+      {/* Ribbons global cursor */}
+      <div className="fixed inset-0 pointer-events-none z-[9999]">
+        <Ribbons
+          colors={['#5227FF']}
+          baseThickness={8}
+          speedMultiplier={0.7}
+          maxAge={400}
+          enableFade={true}
+          enableShaderEffect={false}
+        />
+      </div>
+
       <ScrollProgress />
       <FloatingPill />
 
-      {/* Fixed grid bg */}
-      <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-[0.025]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
-      />
+      <StarsCanvas />
 
       <Navbar />
 
       <main className="relative z-10">
         <Hero />
-        <IntegrationRail />
+        <Skills />
         <BeforeAfterSlider />
         <WorkflowBuilder />
         <Services />

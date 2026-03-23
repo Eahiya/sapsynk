@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Background gradient blobs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[60%] rounded-full"
-             style={{ background: 'radial-gradient(ellipse, rgba(0,255,240,0.06) 0%, transparent 70%)' }} />
+             style={{ background: 'radial-gradient(ellipse, rgba(180, 155, 255,0.06) 0%, transparent 70%)' }} />
         <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[50%] rounded-full"
              style={{ background: 'radial-gradient(ellipse, rgba(139,92,246,0.08) 0%, transparent 70%)' }} />
       </div>
@@ -29,11 +29,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00FFF0]/20 mb-8"
-              style={{ background: 'rgba(0,255,240,0.05)' }}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#b49bff]/20 mb-8"
+              style={{ background: 'rgba(180, 155, 255,0.05)' }}
             >
               <div className="live-dot" />
-              <span className="text-xs font-[family-name:var(--font-mono)] text-[#00FFF0] tracking-widest uppercase">
+              <span className="text-xs font-[family-name:var(--font-mono)] text-[#b49bff] tracking-widest uppercase">
                 AI Automation Agency
               </span>
             </motion.div>
@@ -46,7 +46,7 @@ export default function Hero() {
             >
               We automate{' '}
               <br />
-              <span className="text-[#00FFF0] text-glow-cyan">
+              <span className="text-[#b49bff] text-glow-cyan">
                 the impossible.
               </span>
             </motion.h1>
@@ -71,9 +71,9 @@ export default function Hero() {
                 href="#services"
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.96 }}
-                className="px-7 py-3.5 rounded-full text-[#080808] font-semibold flex items-center gap-2 justify-center
-                           bg-[#00FFF0] hover:bg-[#00FFF0]/90 transition-all shadow-lg"
-                style={{ boxShadow: '0 0 30px rgba(0,255,240,0.3)' }}
+                className="px-7 py-3.5 rounded-full text-[#030014] font-semibold flex items-center gap-2 justify-center
+                           bg-[#b49bff] hover:bg-[#b49bff]/90 transition-all shadow-lg"
+                style={{ boxShadow: '0 0 30px rgba(180, 155, 255,0.3)' }}
               >
                 See Services <ArrowRight className="w-4 h-4" />
               </motion.a>
@@ -82,7 +82,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 className="px-7 py-3.5 rounded-full font-semibold flex items-center gap-2 justify-center
-                           border border-white/15 text-[#F5F0E8]/80 hover:border-[#00FFF0]/30 hover:text-[#00FFF0] transition-all"
+                           border border-white/15 text-[#F5F0E8]/80 hover:border-[#b49bff]/30 hover:text-[#b49bff] transition-all"
               >
                 Book a Call ↗
               </motion.a>
@@ -101,7 +101,7 @@ export default function Hero() {
                 { value: '9+', label: 'AI services' },
               ].map((stat) => (
                 <div key={stat.value}>
-                  <div className="text-2xl font-[family-name:var(--font-mono)] font-bold text-[#00FFF0]">
+                  <div className="text-2xl font-[family-name:var(--font-mono)] font-bold text-[#b49bff]">
                     {stat.value}
                   </div>
                   <div className="text-xs text-[#F5F0E8]/40 mt-1">{stat.label}</div>
@@ -134,14 +134,14 @@ export default function Hero() {
           >
             <div className="live-dot shrink-0" />
             <p className="text-sm text-[#F5F0E8]/90">
-              <span className="text-[#00FFF0] font-semibold">This just ran live.</span>{' '}
+              <span className="text-[#b49bff] font-semibold">This just ran live.</span>{' '}
               Ready to automate your business?
             </p>
             <a
               href="#contact"
               onClick={() => setShowToast(false)}
-              className="shrink-0 text-xs text-[#00FFF0] font-semibold border border-[#00FFF0]/30 px-3 py-1.5 rounded-full
-                         hover:bg-[#00FFF0]/10 transition-all whitespace-nowrap"
+              className="shrink-0 text-xs text-[#b49bff] font-semibold border border-[#b49bff]/30 px-3 py-1.5 rounded-full
+                         hover:bg-[#b49bff]/10 transition-all whitespace-nowrap"
             >
               Book a call →
             </a>
