@@ -116,7 +116,7 @@ function CTASection() {
           style={{ background: 'rgba(0,255,240,0.03)' }}
         >
           <div className="absolute inset-0 pointer-events-none"
-               style={{ background: 'radial-gradient(ellipse at center, rgba(0,255,240,0.08) 0%, transparent 70%)' }} />
+            style={{ background: 'radial-gradient(ellipse at center, rgba(0,255,240,0.08) 0%, transparent 70%)' }} />
           <div className="relative z-10">
             <p className="text-xs font-[family-name:var(--font-mono)] tracking-[0.3em] uppercase text-[#00FFF0]/60 mb-4">
               Ready to Transform?
@@ -149,14 +149,14 @@ export default function App() {
     <div className="min-h-screen bg-[#030014] text-[#F5F0E8] font-[family-name:var(--font-body)] overflow-x-hidden">
       <Toaster theme="dark" position="bottom-right" />
       {/* Global overlays */}
-      
+
       {/* Ribbons global cursor */}
       <div className="fixed inset-0 pointer-events-none z-[9999]">
         <Ribbons
           colors={['#5227FF']}
-          baseThickness={8}
-          speedMultiplier={0.7}
-          maxAge={400}
+          baseThickness={10}
+          speedMultiplier={0.5}
+          maxAge={450}
           enableFade={true}
           enableShaderEffect={false}
         />
