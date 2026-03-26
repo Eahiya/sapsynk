@@ -28,7 +28,7 @@ export const StarBackground = (props: PointsInstancesProps) => {
       <Points
         ref={ref}
         stride={3}
-        positions={new Float32Array(sphere)}
+        positions={sphere as Float32Array}
         frustumCulled
         {...props}
       >
